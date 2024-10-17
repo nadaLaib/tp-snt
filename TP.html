@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP : Crée une page web sur ton film préféré</title>
+    <link rel="stylesheet" href="/style/styleTP.css">
+    <script src="/js/script.js" defer></script> 
+    
+</head>
+<body>
+    <h1>TP1 SNT : Créer une page web sur votre film préféré 🎥</h1>
+    <div class="task">
+        <h2> 🎯Objectif :</h2>
+        <p>Créer une page web qui présente votre film préféré en suivant les étapes ci-dessous. Vous utiliserez du HTML pour structurer la page (étape 1) et du CSS pour la styliser (étape 2).
+        <p><strong>Prérequis :</strong> <ul>
+            <li>
+                HTML : Savoir utiliser les balises et les attributs essentielles.
+            </li>
+            <li>CSS : Compréhension de la façon de sélectionner des éléments et d'appliquer des styles.</li>
+        </ul>
+        </p>
+        <p><strong>Il y a un bonus pour ceux qui finissent le TP plus tôt. Les élèves n'ayant pas réussi à atteindre ce bonus pourront le faire pour la séance prochaine s'ils le souhaitent, ce bonus n'est pas obligatoire.</strong></p></p>
+    </div>
+    <div class="task">
+        <h2>Étape 1 : Créez la structure HTML</h2>
+
+        <h3> 😉 Instructions utiles pour bien démarrer le TP</h3>
+        <p>Ouvrez le dossier <strong>TP_SNT</strong> sur Visual Studio Code. À l'intérieur de ce dossier, se trouve le fichier <strong>mon_film_prefere.html</strong>. Ce fichier sera la page que nous allons construire. Nous allons seulement remplir la balise <code>&lt;body&gt;</code> sans toucher aux autres parties du document.</p>
+        <p>Pour voir votre page web, ouvrez <strong>mon_film_prefere.html</strong> dans un navigateur : pour ouvrir la page, faites un clic droit sur le fichier et cliquez sur <strong>Open</strong>, ou allez dans vos documents, accédez au dossier <strong>TP_SNT</strong> et double-cliquez sur <strong>mon_film_prefere.html</strong>. Au début, elle sera blanche, c'est normal car nous n'avons pas encore commencé à créer notre page.</p>
+        <p> 📌NB : après chaque étape, pensez à actualiser la page pour voir les modifications apportées.</p>
+
+        <p><strong>Page à avoir à la fin de l'étape 1 : </strong></p>
+        <img class ="avantcss"src="/images/page_avant_css.png">
+        <p><strong>🔍 Suivez les étapes suivantes pour créer votre page web :</strong> </p>
+        <ul>
+            <li>Ajoutez un titre de niveau 1 avec le nom de votre film. <span class="help-button" onclick="toggleHelp('help1')">Avoir une aide</span></li>
+            <div class="help" id="help1">
+                <p>Utilisez la balise <code>&lt;h1&gt;</code> pour le titre. Exemple : <code>&lt;h1&gt;Nom de votre film&lt;/h1&gt;</code>.</p>
+            </div>
+            <br>
+            <li>Ajoutez une image du film. <span class="help-button" onclick="toggleHelp('help2')">Avoir une aide</span></li>
+            <div class="help" id="help2">
+                <p>Utilisez la balise <code>&lt;img src="URL_de_l_image" alt="description"&gt;</code> pour ajouter une image.</p>
+                <p> Aussi, pensez à telecharger une image et à la placer dans un dossier afin de pouvoir y accéder via son url.</p>
+            </div>
+            ⮕ À quoi sert l'attribut alt dans votre balise ?
+            <br>
+            <br>
+            <li>Écrivez un paragraphe expliquant pourquoi c'est votre film préféré. <span class="help-button" onclick="toggleHelp('help3')">Avoir une aide</span></li>
+            <div class="help" id="help3">
+                <p>Utilisez la balise <code>&lt;p&gt;</code> pour votre texte. Exemple : <code>&lt;p&gt;C'est mon film préféré parce que...&lt;/p&gt;</code>.</p>
+            </div>
+            <br>
+            ⮕ En HTML, quel balise permet de mettre un mot en gras ?
+            <li>Dans votre paragraphe, mettez le mot que vous souhaitez en gras.</li>
+
+            <br>
+            <li>Ajoutez un titre de niveau 2 "Personnages Principaux" puis créez une liste non ordonnée des personnages principaux. <span class="help-button" onclick="toggleHelp('help4')">Avoir une aide</span></li>
+            <div class="help" id="help4">
+                <p>Utilisez la balise <code>&lt;ul&gt;</code> et <code>&lt;li&gt;</code> pour créer une liste. Exemple : <code>&lt;ul&gt;&lt;li&gt;Personnage 1&lt;/li&gt;&lt;/ul&gt;</code>.</p>
+            </div>
+            <br>
+            <li>Ajoutez un titre de niveau 2 "Bande-annonce" puis créez un lien vers une bande-annonce YouTube. <span class="help-button" onclick="toggleHelp('help5')">Avoir une aide</span></li>
+            <div class="help" id="help5">
+                <p>Utilisez la balise <code>&lt;a href="URL_de_la_bande_annonce"&gt;</code> pour créer le lien. Exemple : <code>&lt;a href="https://www.youtube.com/watch.."&gt;Voir la bande-annonce&lt;/a&gt;</code>.</p>
+            </div>
+        </ul>
+        ⮕ Quelle est la différence entre les balises <code>&lt;ul&gt;</code> et <code>&lt;ol&gt;</code> ? Donnez un exemple d'affichage pour chacune.
+        
+    </div>
+            
+    </div>
+    <div class="task">
+        <h2>Étape 2 : Ajoutez du style avec CSS</h2>
+        <p>Un lien vers la feuille de style a déjà été ajouté dans la section <code>&lt;head&gt;</code> de votre fichier HTML :</p>
+        <div class="code-block">
+            <pre>&lt;link rel="stylesheet" href="/style/style.css"&gt;</pre>
+        </div>
+        <p> 📌Cet ajout est indispensable pour que le style soit bien affecté à la page. Il n'est donc pas nécessaire de le rajouter à nouveau.</p>
+        <p> Cependant, le fichier <strong>style.css</strong> (situé dans le dossier style) est vide, à vous de le compléter avec les styles suivants pour rendre la page plus esthétique. 🎨</p>
+        <p><strong>Page à avoir à la fin de l'étape 2 : </strong></p>
+        <img class ="aprescss"src="/images/page_apres_css.png">
+        <p><strong>🔍 Suivez les étapes suivantes pour créer votre style CSS :</strong></p>
+        <ul>
+            <li>Ajoutez un fond de couleur.</li>
+            <br>
+            <li>Mettez au centre le titre du film, ainsi que les paragraphes</li>
+            <br>
+            <li>Mettez egalement l'image au centre</li>
+            <br>
+            <li>Mettez au centre et ajoutez une bordure pour le titre "Personnage principaux" de la couleur et la taille que vous souhaitez</li>
+            <br>
+            ⮕ A quoi sert les propriétés padding et margin ?
+            <li>Utilisez ces propriétés pour les titres de niveau 2</li>
+            <br>
+            Ajoutez autant de style que vous le souhaitez.
+            <br>📌 Vous pouvez vous renseigner sur les propriétés box-shadow, text-shadow.
+        </ul>
+        ⮕ Pourquoi est-il important d'utiliser des styles CSS pour une page web ?
+        <br>Quel impact cela a-t-il sur l'expérience utilisateur ?
+        ⮕ Selon vous, pourquoi est-il utile d'ajouter des images à une page web ?
+        
+    </div>
+
+   
+</div>
+    <div class="task">
+        <h2> ⭐Bonus : Créez un tableau descriptif du film </h2>
+        <ul>
+            <li>        <p>Retournez dans votre fichier html, ajoutez un tableau pour afficher les détails du film avec 
+                <ul>
+                    <li>
+                        la date de sortie
+                    </li>
+                    <li>
+                        le titre
+                    </li>
+                    <li>
+                        le réalisateur
+                    </li>
+                    <li>
+                        la durée du film
+                    </li>
+                    <li>
+                        le genre
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>Rappel : </p>
+        <ul>
+            <li><strong>&lt;table&gt;</strong> : Utilisé pour définir le tableau.</li>
+            <li><strong>&lt;tr&gt;</strong> : Utilisé pour créer une ligne dans le tableau.</li>
+            <li><strong>&lt;th&gt;</strong> : Utilisé pour créer une cellule d'en-tête (texte en gras et centré).</li>
+            <li><strong>&lt;td&gt;</strong> : Utilisé pour créer une cellule standard dans une ligne.</li>
+        </ul>
+        
+    
+        <p><strong>Qui affichera :</strong> </p>
+    
+        <table>
+            <tr>
+                <th>Titre</th>
+                <td>Super Mario Bros</td>
+            </tr>
+            <tr>
+                <th>Date de sortie</th>
+                <td>5 avril 2023</td>
+            </tr>
+            <tr>
+                <th>Réalisateur</th>
+                <td>Aaron Horvath, Michael Jelenic</td>
+            </tr>
+            <tr>
+                <th>Durée du film</th>
+                <td>1h32</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>Animation, Aventure, Comédie</td>
+            </tr>
+        </table>
+        📌 Ajoutez ce style CSS dans votre fichier style.css afin de voir la structure de votre tableau :
+        <pre>
+            table {
+                width: 80%; 
+                margin: 20px auto; 
+                border-collapse: collapse; 
+            }
+            
+            th, td {
+                border: 1px solid #333; 
+                padding: 10px; 
+                text-align: left; 
+            }
+            
+            th {
+                background-color: #f2f2f2;
+            }
+            </pre>
+ </div>
+
+ <div class="task">
+    <h2> 📤 Rendre son travail</h2>
+    Le rendu de votre travail se fera par mail : Laib-profSNT@lycee-lille.fr
+    <br>
+    <br>
+    Date limite de rendu : 24/10/2024 à 23h59
+</div>
+    <footer>
+        <p>TP créé par l'enseignante Laib | 2024</p>
+    </footer>
+</body>
+</html>
